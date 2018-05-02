@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mStoryStatus += 1;
-                if (topButton.getText() == getString(R.string.T1_Ans1))
+                if (topButton.getText() == getString(R.string.T1_Ans1) || topButton.getText() == getString(R.string.T2_Ans1))
                 {
                     storyTextView.setText(getString(R.string.T3_Story));
                     topButton.setText(getString(R.string.T3_Ans1));
@@ -55,12 +55,7 @@ public class MainActivity extends AppCompatActivity {
                     storyTextView.setText(getString(R.string.T6_End));
                     makeButtonsInvisible();
                 }
-                else if (topButton.getText() == getString(R.string.T2_Ans1))
-                {
-                    storyTextView.setText(getString(R.string.T3_Story));
-                    topButton.setText(getString(R.string.T3_Ans1));
-                    bottomButton.setText(getString(R.string.T3_Ans2));
-                }
+
                 else
                 {
                     storyTextView.setText(getString(R.string.T6_End));
